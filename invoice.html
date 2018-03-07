@@ -1,0 +1,484 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Invoice</title>
+    
+    <style>
+    .text-center {
+        text-align: center;
+    }
+    .no-border td {
+        border: none !important;
+    }
+    .text-left {
+        text-align: left;
+    }
+    .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+        border: 1px solid #8c8c8c;
+    }
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #8c8c8c;
+}
+.text-red {
+    color: #d20000;
+}
+    .invoice-box {
+        max-width: 1350px;
+        margin: auto;
+        padding: 30px;
+        border: 1px solid #eee;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+        font-size: 16px;
+        line-height: 24px;
+        font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        color: #555;
+    }
+    .table-bordered {
+    border: 1px solid #8c8c8c;
+}
+.table>caption+thead>tr:first-child>td, .table>caption+thead>tr:first-child>th, .table>colgroup+thead>tr:first-child>td, .table>colgroup+thead>tr:first-child>th, .table>thead:first-child>tr:first-child>td, .table>thead:first-child>tr:first-child>th {
+    border-top: 0;
+}
+.table{
+    table-layout:fixed;
+    border-collapse:collapse;
+    border-spacing:0;
+}
+.table td{
+    padding:0.25em;
+    border:1px solid black;
+}
+    .invoice-box table {
+        width: 100%;
+        line-height: inherit;
+       
+    }
+    
+    .invoice-box table td {
+        padding: 5px;
+        vertical-align: top;
+    }
+    
+   
+    
+    .invoice-box table tr.top table td {
+        padding-bottom: 20px;
+    }
+    
+    .invoice-box table tr.top table td.title {
+        font-size: 45px;
+        line-height: 45px;
+        color: #333;
+    }
+    
+    .invoice-box table tr.information table td {
+        padding-bottom: 40px;
+    }
+    
+    .invoice-box table tr.heading td {
+        background: #eee;
+        border-bottom: 1px solid #8c8c8c;
+        font-weight: bold;
+    }
+    
+    .invoice-box table tr.details td {
+        padding-bottom: 20px;
+    }
+    
+    .invoice-box table tr.item td{
+        border-bottom: 1px solid #eee;
+    }
+    
+    .invoice-box table tr.item.last td {
+        border-bottom: none;
+    }
+    
+    .invoice-box table tr.total td:nth-child(2) {
+        border-top: 2px solid #eee;
+        font-weight: bold;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .invoice-box table tr.top table td {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+        
+        .invoice-box table tr.information table td {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+    }
+    
+    /** RTL **/
+    .rtl {
+        direction: rtl;
+        font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+    }
+    
+    .rtl table {
+        text-align: right;
+    }
+    
+    .rtl table tr td:nth-child(2) {
+        text-align: left;
+    }
+    .m0 {
+        margin: 0;
+    }
+    .text-muted {
+        color: #777;
+    }
+    ._first tr th, ._first tr td:first-child{
+        background: #ddd;
+    }
+  .ph  {
+    color: #ddd;
+  }
+  ._first tr td:first-child{
+        background: #ddd;
+        width: 110px;
+ }
+ .bg {
+    background: #ddd;
+ }
+    </style>
+</head>
+
+<body>
+    <div class="invoice-box">
+      
+        <table class="table table-bordered text-center _first">
+            <tr>
+                <td> Applicant (s)</td>
+                <th >PAN/PEKRN (if PAN Exempt)</th>
+                <th>Name of the Applicant (s)</th>
+                <th>Date of Birth</th>
+                <th>Adhar</th>
+                <th>CKYC Identifier/KIN</th>
+            </tr>
+            <tr>
+               
+              <td>Sole/Primary</td>
+                <td class="ph">Placeholder</td>
+                <td class="ph">Placeholder</td>
+                <td class="ph">Placeholder</td>
+                <td class="ph">Placeholder</td>
+                <td class="ph">Placeholder</td>
+             
+            </tr>
+            <tr>
+                <td>Second</td>
+                <td class="ph">Placeholder</td>
+                <td class="ph">Placeholder</td>
+                <td class="ph">Placeholder</td>
+                <td class="ph">Placeholder</td>
+                <td class="ph">Placeholder</td>
+            </tr>
+            <tr>
+               <td>third</td>
+                <td class="ph">Placeholder</td>
+                <td class="ph">Placeholder</td>
+                <td class="ph">Placeholder</td>
+                <td class="ph">Placeholder</td>
+                <td class="ph">Placeholder</td>
+            </tr>
+            <tr>
+                <td>Guardian</td>
+                <td class="ph">Placeholder</td>
+                <td class="ph">Placeholder</td>
+                <td class="ph">Placeholder</td>
+                <td class="ph">Placeholder</td>
+                <td class="ph">Placeholder</td>
+            </tr>
+           
+        
+        </table>
+        <table class="table table-bordered">
+            <tr>
+               <td class="bg" style="width: 110px">Guardian Relationship</td>
+                   <td width="420">
+                       <span>
+                           <input type="checkbox">
+                           <label for="">Father</label>,
+                       </span>
+                     <span>
+                         <input type="checkbox">
+                         <label for="">Mother</label>,
+                     </span>
+                     <span>
+                         <input type="checkbox">
+                         <label for="">Court Appointed Legal Guardian</label>
+                     </span>
+                     
+                   </td>
+                   <td class="bg">Proof of Relationship</td>
+                   <td class="ph">placeholder</td>
+                   <td class="bg">Minor DOB proof type</td>
+                   <td class="ph">placeholder</td>
+               
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td class="text-red">Lorem ipsum dolor sit amet,</td>
+                <td class="text-red">consectetur adipisicing elit. Architecto, quaerat.</td>
+                <td class="text-red">consectetur adipisicing elit.</td>
+            </tr>
+        </table>
+            <hr>
+            C. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, nostrum.:
+            <table class="table table-bordered text-center _first">
+                <tr>
+                    <td> Applicant (s)</td>
+                    <th colspan="3"> Landline Number</th>
+                    <th colspan="2" >Mobile Number</th>
+                    <th>Email ID</th>
+                 
+                </tr>
+                <tr rowspan="3">
+                  <td>Sole/Primary</td>
+                  <td class="ph" width="80">ISD</td>
+                  <td class="ph">STD</td>
+                  <td class="ph">Landline Number</td>
+                  <td class="ph">ISD</td>
+                  <td class="ph">Mobile Number</td>
+                  <td class="ph">Email ID</td>
+                 
+                </tr>
+                <tr>
+                    <td>Second</td>
+                    <td class="ph">ISD</td>
+                   <td class="ph">STD</td>
+                   <td class="ph">Landline Number</td>
+                   <td class="ph">ISD</td>
+                   <td class="ph">Mobile Number</td>
+                   <td class="ph">Email ID</td>
+                </tr>
+                <tr>
+                   <td>third</td>
+                   <td class="ph">ISD</td>
+                    <td class="ph">STD</td>
+                    <td class="ph">Landline Number</td>
+                    <td class="ph">ISD</td>
+                    <td class="ph">Mobile Number</td>
+                    <td class="ph">Email ID</td>
+                </tr>
+                <tr>
+                    <td>Guardian</td>
+                      <td class="ph">ISD</td>
+                   <td class="ph">STD</td>
+                   <td class="ph">Landline Number</td>
+                   <td class="ph">ISD</td>
+                   <td class="ph">Mobile Number</td>
+                   <td class="ph">Email ID</td>
+                </tr>
+              
+            
+            </table>
+
+            <hr>
+            D. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, nostrum.:
+            <table class="table table-bordered text-center _first">
+                <tr>
+                    <td> Details *</td>
+                   
+                    <th>Bank Account for Payout (1)</th>
+                    <th>Bank Account for Payout (2)</th>
+                    <th>Bank Account for Payout (3)</th>
+                 
+                </tr>
+                <tr rowspan="3">
+                  <td>A/c No.</td>
+                  
+                 
+                </tr>
+                <tr>
+                    <td>A/c Type</td>
+                   <td>
+                       <span>
+                           <input type="checkbox">
+                           <label for="">SB</label>,
+                       </span>
+                       <span>
+                           <input type="checkbox">
+                           <label for="">CA</label>,
+                       </span> 
+                         <span>
+                           <input type="checkbox">
+                           <label for="">NRE</label>,
+                       </span>
+                       <span>
+                           <input type="checkbox">
+                           <label for="">NRO</label>,
+                       </span>  
+                       <span>
+                           <input type="checkbox">
+                           <label for="">Others</label>
+                       </span>
+                   </td>
+                   <td>
+                       <span>
+                           <input type="checkbox">
+                           <label for="">SB</label>,
+                       </span>
+                       <span>
+                           <input type="checkbox">
+                           <label for="">CA</label>,
+                       </span> 
+                         <span>
+                           <input type="checkbox">
+                           <label for="">NRE</label>,
+                       </span>
+                       <span>
+                           <input type="checkbox">
+                           <label for="">NRO</label>,
+                       </span>  
+                       <span>
+                           <input type="checkbox">
+                           <label for="">Others</label>
+                       </span>
+                   </td>
+                   <td>
+                       <span>
+                           <input type="checkbox">
+                           <label for="">SB</label>,
+                       </span>
+                       <span>
+                           <input type="checkbox">
+                           <label for="">CA</label>,
+                       </span> 
+                         <span>
+                           <input type="checkbox">
+                           <label for="">NRE</label>,
+                       </span>
+                       <span>
+                           <input type="checkbox">
+                           <label for="">NRO</label>,
+                       </span>  
+                       <span>
+                           <input type="checkbox">
+                           <label for="">Others</label>
+                       </span>
+                   </td>
+                </tr>
+                <tr>
+                   <td>MICR</td>
+                 <td>&nbsp;</td>
+                 <td>&nbsp;</td>
+                 <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Bank Name</td>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                </tr>
+                 <tr>
+                    <td>Branch Name</td>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                </tr>
+                 <tr>
+                    <td>Branch City</td>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                </tr> 
+                <tr>
+                    <td>Proof of A/c</td>
+                   <td>
+                        <table class="no-border text-left">
+                            <tr>
+                                <td style="width: inherit;background: inherit;">
+        
+                                    <div>
+                                      <input type="checkbox">
+                                      <label for="">Cancelled Cheque/Copy</label>
+                                    </div>
+                                     <div>
+                                      <input type="checkbox">
+                                      <label for="">Bank Passbook</label>
+                                    </div>
+                                </td>
+                                <td>
+                                     <div>
+                                      <input type="checkbox">
+                                      <label for="">Bank Statement</label>
+                                    </div>
+                                     <div>
+                                      <input type="checkbox">
+                                      <label for="">Bank Letter</label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                   </td>
+                   <td>
+                        <table class="no-border text-left">
+                            <tr>
+                                <td style="width: inherit;background: inherit;">
+                   
+                                    <div>
+                                      <input type="checkbox">
+                                      <label for="">Cancelled Cheque/Copy</label>
+                                    </div>
+                                     <div>
+                                      <input type="checkbox">
+                                      <label for="">Bank Passbook</label>
+                                    </div>
+                                </td>
+                                <td>
+                                     <div>
+                                      <input type="checkbox">
+                                      <label for="">Bank Statement</label>
+                                    </div>
+                                     <div>
+                                      <input type="checkbox">
+                                      <label for="">Bank Letter</label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                   </td>
+                   <td>
+                        <table class="no-border text-left">
+                            <tr>
+                                <td style="width: inherit;background: inherit;">
+                   
+                                    <div>
+                                      <input type="checkbox">
+                                      <label for="">Cancelled Cheque/Copy</label>
+                                    </div>
+                                     <div>
+                                      <input type="checkbox">
+                                      <label for="">Bank Passbook</label>
+                                    </div>
+                                </td>
+                                <td>
+                                     <div>
+                                      <input type="checkbox">
+                                      <label for="">Bank Statement</label>
+                                    </div>
+                                     <div>
+                                      <input type="checkbox">
+                                      <label for="">Bank Letter</label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                   </td>
+                </tr>
+              
+            
+            </table>
+    </div>
+</body>
+</html>
